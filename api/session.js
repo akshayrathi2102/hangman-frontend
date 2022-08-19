@@ -1,5 +1,4 @@
-require("dotenv").config();
-const BASE_URL = process.env.BASE_URL;
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const createSession = async (name) => {
   const response = await fetch(`${BASE_URL}/`, {
