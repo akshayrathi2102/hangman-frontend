@@ -1,9 +1,9 @@
 import React from "react";
 
 const MaskedWord = ({ maskedWord }) => {
-  return (<>
-    {maskedWord}
-  </>)
+  return (<div className="masked-word">
+    <p>{maskedWord.join(" ")}</p>
+  </div>)
 }
 
 export default MaskedWord;

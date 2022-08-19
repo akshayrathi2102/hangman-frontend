@@ -1,0 +1,17 @@
+.game-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.keyboard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.result {
+  text-align: center;
+  font-size: 3rem;
+  color: $fg-dark;
+}

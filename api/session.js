@@ -1,4 +1,5 @@
-const BASE_URL = "http://localhost:3000/api/sessions";
+require("dotenv").config();
+const BASE_URL = process.env.BASE_URL;
 
 const createSession = async (name) => {
   const response = await fetch(`${BASE_URL}/`, {

@@ -1,0 +1,23 @@
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__row {
+    display: flex;
+    flex-direction: row;
+  }
+  .key {
+    background-color: $fg-dark;
+    color: $bg-dark;
+    margin: 0.2rem;
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 3rem;
+
+    &:disabled {
+      opacity: 0.2;
+    }
+  }
+}

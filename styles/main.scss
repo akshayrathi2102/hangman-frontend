@@ -1,0 +1,125 @@
+$bg-dark: #141e27;
+$bg-light: #203239;
+$fg-dark: #e0ddaa;
+$fg-light: #eeedde;
+
+@import "./components/start.scss";
+@import "./components/keys.scss";
+@import "./components/layout.scss";
+@import "./components/maskedWord.scss";
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  background-color: $bg-dark;
+}
+.heading-game {
+  color: $fg-dark;
+  text-align: center;
+  font-size: 3rem;
+  margin: 0rem;
+}
+
+hr {
+  color: $fg-dark;
+}
+
+.lives {
+  text-align: center;
+  font-size: 3rem;
+  color: $fg-dark;
+}
+.hangman-container {
+  position: relative;
+  padding-left: 10rem;
+  padding-top: 8rem;
+  height: 480px;
+}
+.pole {
+  position: absolute;
+  height: 650px;
+  width: 10px;
+  top: 2rem;
+  left: 3rem;
+  background-color: $fg-dark;
+  border-radius: 5px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 180px;
+    background-color: $fg-dark;
+    border-radius: 5px;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    height: 100px;
+    width: 10px;
+    left: calc(10rem + 10px);
+    background-color: $fg-dark;
+    border-radius: 5px;
+  }
+}
+.hangman {
+  position: relative;
+
+  &__element {
+    opacity: 0.1;
+    &:nth-child(1) {
+      height: 100px;
+      width: 100px;
+      border: 10px solid $fg-dark;
+      border-radius: 50%;
+    }
+
+    &:not(:first-child) {
+      position: absolute;
+      height: 100px;
+      width: 10px;
+      background-color: $fg-dark;
+      border-radius: 5px;
+    }
+
+    &:nth-child(2) {
+      height: 250px;
+      transform: translatex(55px);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(45deg);
+      top: 150px;
+      left: 20px;
+    }
+
+    &:nth-child(4) {
+      transform: rotate(-45deg);
+      top: 150px;
+      left: 90px;
+    }
+
+    &:nth-child(5) {
+      transform: rotate(45deg);
+      top: 350px;
+      left: 20px;
+    }
+
+    &:nth-child(6) {
+      transform: rotate(-45deg);
+      top: 350px;
+      left: 90px;
+    }
+  }
+}
+
+@for $i from 1 through 6 {
+  .hangman-#{$i} {
+    @for $j from 1 through $i {
+      .hangman__element:nth-child(#{$j}) {
+        opacity: 1;
+      }
+    }
+  }
+}
