@@ -1,4 +1,4 @@
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = process.env.REACT_APP_BASE_URL || "https://cryptic-falls-39871.herokuapp.com/api/sessions";
 
 const createSession = async (name) => {
   const response = await fetch(`${BASE_URL}/`, {
