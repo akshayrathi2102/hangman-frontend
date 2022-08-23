@@ -2,12 +2,6 @@
 <a name="readme-top"></a>
 
 
-<!-- PROJECT SHIELDS -->
-[![Contributors][contributors-shield]][https://github.com/akshayrathi2102]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/akshay-rathi-5806bb171/]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -89,7 +83,7 @@ Distributed under the MIT License.
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/akshayrathi2102/hangman-frontend.git](https://github.com/akshayrathi2102/hangman-frontend.git)
+Project Link: [https://playhangman.games/](https://playhangman.games/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
