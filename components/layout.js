@@ -3,6 +3,7 @@ import Hangman from "./hangman";
 import Keys from "./keys";
 import MaskedWord from "./maskedWord";
 import Start from "./start";
+import Hint from "./hint";
 
 const Layout = ({ isRunning, session, start, guess }) => {
   return (
@@ -23,6 +24,7 @@ const Layout = ({ isRunning, session, start, guess }) => {
         <div className="game-container">
           <Hangman lives={session.livesLeft} />
           <div className="keyboard-container">
+            <Hint hint={"fruit"}/>
             <MaskedWord maskedWord={session.maskedWord} />
             <Keys playedLetters={session.playedLetters} guess={guess} />
           </div>

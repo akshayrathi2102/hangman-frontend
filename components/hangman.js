@@ -1,6 +1,6 @@
 import React from 'react'
 
-const hangman = ({ lives }) => {
+const Hangman = ({ lives }) => {
   return (
     <div>
       <div className='lives'>Lives: {lives}</div>
@@ -19,4 +19,4 @@ const hangman = ({ lives }) => {
   )
 }
 
-export default hangman;
+export default Hangman;
